@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LASTONE — Location de serveurs FiveM & RedM clé en main</title>
-<meta name="description" content="Base complète, machine protégée anti-DDoS, support par des devs avec 10 ans d'expérience. Lance ton serveur FiveM ou RedM en 3 à 5 jours.">
+<meta name="description" content="Base complète, anti-DDoS, 10 ans d'expérience. Le #1 français sur RedM (record mondial : 650 joueurs connectés) dans l'équipe. Lance ton serveur FiveM ou RedM en 3 à 5 jours.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -533,13 +533,13 @@ section { padding: 120px 0; position: relative; z-index: 2; }
   text-transform: uppercase;
   white-space: nowrap;
 }
-.tier.popular { border-color: var(--blue); }
+.tier.popular { border-color: var(--blue); box-shadow: 0 0 28px -14px rgba(92, 156, 230, 0.55); }
 .tier.popular .tier-badge { background: var(--blue); color: #0a1a33; }
-.tier.popular:hover { box-shadow: 0 0 40px -10px rgba(92, 156, 230, 0.4); }
+.tier.popular:hover { box-shadow: 0 0 50px -10px rgba(92, 156, 230, 0.55); }
 
-.tier.best { border-color: var(--green); }
+.tier.best { border-color: var(--green); border-width: 2px; box-shadow: 0 0 32px -14px rgba(123, 214, 143, 0.6); }
 .tier.best .tier-badge { background: var(--green); color: #0a2418; }
-.tier.best:hover { box-shadow: 0 0 40px -10px rgba(123, 214, 143, 0.4); }
+.tier.best:hover { box-shadow: 0 0 52px -10px rgba(123, 214, 143, 0.6); }
 
 .tier.premium { border-color: var(--gold); }
 .tier.premium .tier-badge { background: var(--gold); color: #1a1400; }
@@ -589,7 +589,31 @@ section { padding: 120px 0; position: relative; z-index: 2; }
   text-align: center;
   font-size: 13px;
   color: var(--text-dim);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+.tier-rate {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.tier.popular .tier-rate { color: var(--blue); }
+.tier.best .tier-rate { color: var(--green); }
+.tier.premium .tier-rate { color: var(--gold); }
+.tier-pitch {
+  text-align: center;
+  font-size: 12px;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid rgba(255, 77, 46, 0.25);
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 1.35;
 }
 .tier-features {
   list-style: none;
@@ -785,6 +809,16 @@ section { padding: 120px 0; position: relative; z-index: 2; }
 }
 .included-box.yes li { color: var(--text); }
 .included-box.no li { color: var(--text-dim); }
+.ownership-note {
+  margin-top: 16px;
+  padding: 12px 14px;
+  font-size: 12px;
+  color: var(--text-dim);
+  background: rgba(255, 77, 46, 0.06);
+  border-left: 2px solid var(--accent);
+  border-radius: 4px;
+  line-height: 1.55;
+}
 .check {
   width: 14px; height: 14px;
   display: inline-flex;
@@ -1006,7 +1040,8 @@ footer {
     </h1>
     <p class="hero-sub">
       Base FiveM ou RedM complète, machine protégée anti-DDoS, scripts premium
-      et 10 ans d'expérience derrière chaque ligne de code. Tu ouvres, on livre.
+      et 10 ans d'expérience derrière chaque ligne de code. Dans l'équipe : le <strong>#1 français sur RedM</strong>,
+      détenteur du record mondial à <strong>650 joueurs connectés simultanément</strong>. Tu ouvres, on livre.
     </p>
     <div class="hero-cta">
       <a href="#pricing" class="btn btn-primary btn-lg">Voir les offres →</a>
@@ -1019,8 +1054,8 @@ footer {
         <div class="hero-stat-label">D'expérience FiveM</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num"><span class="u">2048</span></div>
-        <div class="hero-stat-label">Slots max</div>
+        <div class="hero-stat-num"><span class="u">650</span></div>
+        <div class="hero-stat-label">Record mondial RedM</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-num">3–5 jours</div>
@@ -1042,8 +1077,8 @@ footer {
     <div class="ticker-item">ANTI-DDOS 24/7<span class="dot"></span></div>
     <div class="ticker-item">BASE CUSTOM<span class="dot"></span></div>
     <div class="ticker-item">DÉVELOPPEURS SENIORS<span class="dot"></span></div>
-    <div class="ticker-item">SUPPORT FRANÇAIS<span class="dot"></span></div>
-    <div class="ticker-item">MAPPINGS INCLUS<span class="dot"></span></div>
+    <div class="ticker-item">SUPPORT FR / EN<span class="dot"></span></div>
+    <div class="ticker-item">MONITORING 24/7<span class="dot"></span></div>
     <div class="ticker-item">SETUP 3-5 JOURS<span class="dot"></span></div>
     <!-- Duplicate for seamless loop -->
     <div class="ticker-item">FIVEM<span class="dot"></span></div>
@@ -1051,8 +1086,8 @@ footer {
     <div class="ticker-item">ANTI-DDOS 24/7<span class="dot"></span></div>
     <div class="ticker-item">BASE CUSTOM<span class="dot"></span></div>
     <div class="ticker-item">DÉVELOPPEURS SENIORS<span class="dot"></span></div>
-    <div class="ticker-item">SUPPORT FRANÇAIS<span class="dot"></span></div>
-    <div class="ticker-item">MAPPINGS INCLUS<span class="dot"></span></div>
+    <div class="ticker-item">SUPPORT FR / EN<span class="dot"></span></div>
+    <div class="ticker-item">MONITORING 24/7<span class="dot"></span></div>
     <div class="ticker-item">SETUP 3-5 JOURS<span class="dot"></span></div>
   </div>
 </div>
@@ -1063,7 +1098,7 @@ footer {
     <div class="section-header">
       <div class="eyebrow">// Pourquoi LastOne</div>
       <h2 class="section-title">Une base qu'on<br>a <span class="em">peaufiné</span> 10 ans.</h2>
-      <p class="section-sub">Pendant que les autres copient-collent CubeX tel quel, nous on l'a réécrite. Tu hérites d'une décennie d'optimisations, corrections, et itérations.</p>
+      <p class="section-sub">Pendant que d'autres galèrent à installer un serveur de zéro, toi tu hérites d'une décennie d'optimisations, de corrections et d'itérations. Tu ouvres, c'est déjà rodé.</p>
     </div>
 
     <div class="features">
@@ -1079,7 +1114,7 @@ footer {
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
         </div>
         <h3>Clé en main</h3>
-        <p>Base complète, scripts pré-installés, téléphone classique et mappings gratuits inclus. Tu ouvres ton admin, tu paramètres, et c'est bon.</p>
+        <p>Base complète : scripts pré-installés, économie, jobs, factions, admin tools. Tu ouvres ton admin, tu paramètres, et c'est bon.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
@@ -1092,15 +1127,15 @@ footer {
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
-        <h3>Support FR natif</h3>
-        <p>Tu parles à un dev, pas à un bot. Quand y'a un bug, la réponse vient de quelqu'un qui a codé le système. En français.</p>
+        <h3>Support FR &amp; EN</h3>
+        <p>Tu parles à un dev, pas à un bot. Quand y'a un bug, la réponse vient de quelqu'un qui a codé le système. Support disponible en français et en anglais.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
         <h3>FiveM & RedM</h3>
-        <p>Un seul prestataire pour les deux univers. Tu passes de Los Santos au Far West sans changer d'interlocuteur ni de qualité de service.</p>
+        <p>Un seul prestataire pour les deux univers. Côté RedM, tu bosses avec le <strong>#1 français</strong>, détenteur du record mondial à 650 joueurs connectés simultanément.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
@@ -1136,7 +1171,7 @@ footer {
         <div class="step-content">
           <div class="duration">JOUR 1-2</div>
           <h3>Provisioning infra</h3>
-          <p>Ta machine est montée, blindée anti-DDoS, configurée selon ton tier. Dolly s'occupe de tout : OS, réseau, monitoring, backups automatiques.</p>
+          <p>Ta machine est montée, blindée anti-DDoS, configurée selon ton tier. Doly s'occupe de tout : OS, réseau, monitoring, backups automatiques.</p>
         </div>
       </div>
       <div class="step">
@@ -1180,17 +1215,18 @@ footer {
       <!-- Starter -->
       <div class="tier">
         <div class="tier-name">STARTER</div>
-        <div class="tier-price"><span class="amount">290€</span></div>
+        <div class="tier-price"><span class="amount">390€</span></div>
         <div class="tier-period">par mois</div>
         <div class="tier-divider"></div>
         <div class="tier-slots">128 slots</div>
+        <div class="tier-rate">3,05€ par slot</div>
         <div class="tier-target">Petite communauté</div>
         <ul class="tier-features">
           <li>Support standard</li>
           <li>Mises à jour incluses</li>
-          <li>Téléphone inclus</li>
-          <li>Mappings gratuits</li>
           <li>Anti-DDoS 24/7</li>
+          <li>Monitoring 24/7</li>
+          <li>Sans engagement</li>
         </ul>
         <button class="tier-cta">Commencer</button>
       </div>
@@ -1199,17 +1235,19 @@ footer {
       <div class="tier popular">
         <div class="tier-badge">Populaire</div>
         <div class="tier-name">GROWTH</div>
-        <div class="tier-price"><span class="amount">490€</span></div>
+        <div class="tier-price"><span class="amount">590€</span></div>
         <div class="tier-period">par mois</div>
         <div class="tier-divider"></div>
         <div class="tier-slots">256 slots</div>
+        <div class="tier-rate">2,30€ par slot</div>
         <div class="tier-target">Communauté active</div>
+        <div class="tier-pitch">+200€ → tu doubles les slots</div>
         <ul class="tier-features">
           <li>Support prioritaire</li>
           <li>Mises à jour incluses</li>
-          <li>Téléphone inclus</li>
-          <li>Mappings gratuits</li>
           <li>Anti-DDoS 24/7</li>
+          <li>Monitoring 24/7</li>
+          <li>Upgrade 24h sans downtime</li>
         </ul>
         <button class="tier-cta">Prendre Growth</button>
       </div>
@@ -1217,17 +1255,19 @@ footer {
       <!-- Pro -->
       <div class="tier">
         <div class="tier-name">PRO</div>
-        <div class="tier-price"><span class="amount">790€</span></div>
+        <div class="tier-price"><span class="amount">880€</span></div>
         <div class="tier-period">par mois</div>
         <div class="tier-divider"></div>
         <div class="tier-slots">512 slots</div>
+        <div class="tier-rate">1,72€ par slot</div>
         <div class="tier-target">Serveur établi</div>
+        <div class="tier-pitch">+290€ → 2× les slots + dev custom</div>
         <ul class="tier-features">
           <li>Support prioritaire</li>
           <li>2h dev custom/mois</li>
-          <li>Téléphone inclus</li>
-          <li>Mappings gratuits</li>
           <li>Anti-DDoS 24/7</li>
+          <li>Monitoring 24/7</li>
+          <li>Upgrade 24h sans downtime</li>
         </ul>
         <button class="tier-cta">Prendre Pro</button>
       </div>
@@ -1240,13 +1280,15 @@ footer {
         <div class="tier-period">par mois</div>
         <div class="tier-divider"></div>
         <div class="tier-slots">1024 slots</div>
+        <div class="tier-rate">1,26€ par slot</div>
         <div class="tier-target">Grande communauté</div>
+        <div class="tier-pitch">+410€ → 2× les slots + machine dédiée</div>
         <ul class="tier-features">
           <li>Support VIP 24/7</li>
           <li>5h dev custom/mois</li>
           <li>Machine dédiée</li>
-          <li>Téléphone inclus</li>
-          <li>Mappings gratuits</li>
+          <li>Anti-DDoS 24/7</li>
+          <li>Monitoring 24/7</li>
         </ul>
         <button class="tier-cta">Prendre Elite</button>
       </div>
@@ -1259,13 +1301,15 @@ footer {
         <div class="tier-period">par mois</div>
         <div class="tier-divider"></div>
         <div class="tier-slots">2048 slots</div>
+        <div class="tier-rate">0,87€ par slot</div>
         <div class="tier-target">Infrastructure max</div>
+        <div class="tier-pitch">Slots max — limite OneSync Infinity</div>
         <ul class="tier-features">
           <li>Support VIP 24/7</li>
           <li>10h dev custom/mois</li>
           <li>Machine premium</li>
-          <li>Téléphone inclus</li>
-          <li>Mappings gratuits</li>
+          <li>Anti-DDoS 24/7</li>
+          <li>Monitoring 24/7</li>
         </ul>
         <button class="tier-cta">Prendre Ultimate</button>
       </div>
@@ -1292,18 +1336,19 @@ footer {
         <ul class="included-list">
           <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Base FiveM ou RedM</li>
           <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Protection Anti-DDoS 24/7</li>
-          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Téléphone classique</li>
-          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Mappings gratuits</li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Monitoring 24/7</li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Backups automatiques</li>
           <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Mises à jour</li>
         </ul>
       </div>
       <div class="included-box no">
-        <div class="label">// À TA CHARGE</div>
+        <div class="label">// TU ACHÈTES — ET TU GARDES À VIE</div>
         <ul class="included-list">
           <li>Abonnement CFX</li>
-          <li>Téléphone premium</li>
-          <li>Mappings premium</li>
+          <li>Téléphone premium (optionnel)</li>
+          <li>Mappings premium (optionnels)</li>
         </ul>
+        <div class="ownership-note">Ces éléments t'appartiennent. Si un jour tu pars ou testes ailleurs, tu repars avec ton abonnement CFX, ton téléphone et tes mappings. Zéro vendor lock-in — tu perds rien.</div>
       </div>
     </div>
   </div>
@@ -1392,7 +1437,7 @@ footer {
           <span>Je démarre avec peu de joueurs, est-ce que le Starter est rentable pour moi ?</span>
           <span class="faq-toggle">+</span>
         </div>
-        <div class="faq-a">Oui. Le Starter à 290€/mois te donne 128 slots, une vraie protection anti-DDoS et une base pro que tu ne pourrais pas avoir en louant seul chez un hébergeur classique. Tu lances petit, et tu montes de tier quand ta communauté grandit — sans interruption de service.</div>
+        <div class="faq-a">Oui. Le Starter à 390€/mois te donne 128 slots, une vraie protection anti-DDoS et une base pro que tu ne pourrais pas avoir en louant seul chez un hébergeur classique. Tu lances petit, et tu montes de tier quand ta communauté grandit — sans interruption de service.</div>
       </div>
       <div class="faq">
         <div class="faq-q">
@@ -1466,7 +1511,7 @@ footer {
           <span class="logo-dot"></span>
           LASTONE
         </a>
-        <p>Location de serveurs FiveM &amp; RedM clé en main, par des devs avec 10 ans d'expérience. Base custom, anti-DDoS, support FR.</p>
+        <p>Location de serveurs FiveM &amp; RedM clé en main, par des devs avec 10 ans d'expérience. Base custom, anti-DDoS, support FR / EN.</p>
       </div>
       <div class="footer-col">
         <h4>Produit</h4>
@@ -1480,10 +1525,10 @@ footer {
       <div class="footer-col">
         <h4>Équipe</h4>
         <ul>
-          <li><a href="#">Dév principal</a></li>
-          <li><a href="#">Infra (Dolly)</a></li>
-          <li><a href="#">Dév (dKS)</a></li>
-          <li><a href="#">Mapping (IPromix)</a></li>
+          <li>Dév principal (DVR)</li>
+          <li>Infra (Doly)</li>
+          <li>Dév (dKS)</li>
+          <li>Mapping (IProMx)</li>
         </ul>
       </div>
       <div class="footer-col">
