@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LASTONE — Location de serveurs FiveM & RedM clé en main</title>
-<meta name="description" content="Base complète, anti-DDoS, 10 ans d'expérience. Le #1 français sur RedM (record mondial : 650 joueurs connectés) dans l'équipe. Lance ton serveur FiveM ou RedM en 3 à 5 jours.">
+<title data-i18n="meta.title">LASTONE — Turnkey FiveM & RedM server hosting</title>
+<meta name="description" data-i18n-attr="meta.description:content" content="Full custom base, anti-DDoS, 10 years of experience. The #1 French creator on RedM (world record: 650 connected players) is on the team. Launch your FiveM or RedM server in 3 to 5 days.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,6 +115,27 @@ nav.scrolled { border-bottom-color: var(--border); }
 .nav-links a:hover { color: var(--text); }
 .nav-links a.btn-primary,
 .nav-links a.btn-primary:hover { color: #fff; font-weight: 700; }
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+}
+.lang-toggle:hover { border-color: var(--accent); color: var(--text); }
+.lang-toggle .lang-opt { padding: 0 2px; transition: color 0.2s; }
+.lang-toggle .lang-opt.active { color: var(--accent); }
+.lang-toggle .lang-sep { color: var(--text-muted); opacity: 0.5; }
 
 .btn {
   display: inline-flex;
@@ -1112,11 +1133,18 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
       LASTONE
     </a>
     <ul class="nav-links">
-      <li><a href="#features">Fonctionnalités</a></li>
-      <li><a href="#pricing">Tarifs</a></li>
-      <li><a href="#addons">Add-ons</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#cta" class="btn btn-primary">Réserver</a></li>
+      <li><a href="#features" data-i18n="nav.features">Features</a></li>
+      <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+      <li><a href="#addons" data-i18n="nav.addons">Add-ons</a></li>
+      <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+      <li>
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+          <span class="lang-opt" data-lang-opt="en">EN</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-opt" data-lang-opt="fr">FR</span>
+        </button>
+      </li>
+      <li><a href="#cta" class="btn btn-primary" data-i18n="nav.cta">Book</a></li>
     </ul>
   </div>
 </nav>
@@ -1126,37 +1154,37 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="container hero-content">
-    <div class="hero-badge">Lancement officiel — places limitées</div>
-    <h1>
-      Lance ton serveur<br>
-      <span class="strike">en 6 mois</span> <span class="accent">en 5 jours.</span>
+    <div class="hero-badge" data-i18n="hero.badge">Official launch — limited slots</div>
+    <h1 data-i18n="hero.h1">
+      Launch your server<br>
+      <span class="strike">in 6 months</span> <span class="accent">in 5 days.</span>
     </h1>
-    <p class="hero-sub">
-      Base FiveM ou RedM complète, machine protégée anti-DDoS, scripts premium
-      et 10 ans d'expérience derrière chaque ligne de code. Dans l'équipe : le <strong>#1 français sur RedM</strong>,
-      détenteur du record mondial à <strong>650 joueurs connectés simultanément</strong>. Tu ouvres, on livre.
+    <p class="hero-sub" data-i18n="hero.sub">
+      Full FiveM or RedM base, DDoS-protected machine, premium scripts
+      and 10 years of experience behind every line of code. On the team: the <strong>#1 French creator on RedM</strong>,
+      holder of the world record at <strong>650 players connected simultaneously</strong>. You open, we deliver.
     </p>
     <div class="hero-cta">
-      <a href="#pricing" class="btn btn-primary btn-lg">Voir les offres →</a>
-      <a href="#features" class="btn btn-ghost btn-lg">Comment ça marche</a>
+      <a href="#pricing" class="btn btn-primary btn-lg" data-i18n="hero.ctaPrimary">See offers →</a>
+      <a href="#features" class="btn btn-ghost btn-lg" data-i18n="hero.ctaGhost">How it works</a>
     </div>
 
     <div class="hero-stats">
       <div class="hero-stat">
-        <div class="hero-stat-num"><span class="u">10</span> ans</div>
-        <div class="hero-stat-label">D'expérience FiveM</div>
+        <div class="hero-stat-num" data-i18n="hero.stat1.num"><span class="u">10</span> yrs</div>
+        <div class="hero-stat-label" data-i18n="hero.stat1.label">FiveM experience</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num"><span class="u">650</span><span class="num-suffix">joueurs</span></div>
-        <div class="hero-stat-label">Record mondial RedM</div>
+        <div class="hero-stat-num" data-i18n="hero.stat2.num"><span class="u">650</span><span class="num-suffix">players</span></div>
+        <div class="hero-stat-label" data-i18n="hero.stat2.label">RedM world record</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">3–5 jours</div>
-        <div class="hero-stat-label">Installation</div>
+        <div class="hero-stat-num" data-i18n="hero.stat3.num">3–5 days</div>
+        <div class="hero-stat-label" data-i18n="hero.stat3.label">Installation</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-num">24/7</div>
-        <div class="hero-stat-label">Anti-DDoS</div>
+        <div class="hero-stat-label" data-i18n="hero.stat4.label">Anti-DDoS</div>
       </div>
     </div>
   </div>
@@ -1168,20 +1196,20 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
     <div class="ticker-item">FIVEM<span class="dot"></span></div>
     <div class="ticker-item">REDM<span class="dot"></span></div>
     <div class="ticker-item">ANTI-DDOS 24/7<span class="dot"></span></div>
-    <div class="ticker-item">BASE CUSTOM<span class="dot"></span></div>
-    <div class="ticker-item">DÉVELOPPEURS SENIORS<span class="dot"></span></div>
-    <div class="ticker-item">SUPPORT FR / EN<span class="dot"></span></div>
+    <div class="ticker-item" data-i18n="ticker.base">CUSTOM BASE<span class="dot"></span></div>
+    <div class="ticker-item" data-i18n="ticker.devs">SENIOR DEVELOPERS<span class="dot"></span></div>
+    <div class="ticker-item" data-i18n="ticker.support">SUPPORT EN / FR<span class="dot"></span></div>
     <div class="ticker-item">MONITORING 24/7<span class="dot"></span></div>
-    <div class="ticker-item">SETUP 3-5 JOURS<span class="dot"></span></div>
+    <div class="ticker-item" data-i18n="ticker.setup">3-5 DAY SETUP<span class="dot"></span></div>
     <!-- Duplicate for seamless loop -->
     <div class="ticker-item">FIVEM<span class="dot"></span></div>
     <div class="ticker-item">REDM<span class="dot"></span></div>
     <div class="ticker-item">ANTI-DDOS 24/7<span class="dot"></span></div>
-    <div class="ticker-item">BASE CUSTOM<span class="dot"></span></div>
-    <div class="ticker-item">DÉVELOPPEURS SENIORS<span class="dot"></span></div>
-    <div class="ticker-item">SUPPORT FR / EN<span class="dot"></span></div>
+    <div class="ticker-item" data-i18n="ticker.base">CUSTOM BASE<span class="dot"></span></div>
+    <div class="ticker-item" data-i18n="ticker.devs">SENIOR DEVELOPERS<span class="dot"></span></div>
+    <div class="ticker-item" data-i18n="ticker.support">SUPPORT EN / FR<span class="dot"></span></div>
     <div class="ticker-item">MONITORING 24/7<span class="dot"></span></div>
-    <div class="ticker-item">SETUP 3-5 JOURS<span class="dot"></span></div>
+    <div class="ticker-item" data-i18n="ticker.setup">3-5 DAY SETUP<span class="dot"></span></div>
   </div>
 </div>
 
@@ -1189,9 +1217,9 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
 <section id="features">
   <div class="container">
     <div class="section-header">
-      <div class="eyebrow">// Pourquoi LastOne</div>
-      <h2 class="section-title">Une base qu'on<br>a <span class="em">peaufiné</span> 10 ans.</h2>
-      <p class="section-sub">Pendant que d'autres galèrent à installer un serveur de zéro, toi tu hérites d'une décennie d'optimisations, de corrections et d'itérations. Tu ouvres, c'est déjà rodé.</p>
+      <div class="eyebrow" data-i18n="features.eyebrow">// Why LastOne</div>
+      <h2 class="section-title" data-i18n="features.title">A base we've<br><span class="em">refined</span> for 10 years.</h2>
+      <p class="section-sub" data-i18n="features.sub">While others struggle to set up a server from scratch, you inherit a decade of optimizations, fixes and iterations. You open, it's already dialed in.</p>
     </div>
 
     <div class="features">
@@ -1199,43 +1227,43 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3>Machine blindée</h3>
-        <p>Protection anti-DDoS 24/7 déjà configurée. Tes joueurs ne voient jamais une déconnexion causée par une attaque. On s'en occupe.</p>
+        <h3 data-i18n="features.f1.title">Armored machine</h3>
+        <p data-i18n="features.f1.body">24/7 anti-DDoS protection already configured. Your players never see a disconnect caused by an attack. We handle it.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
         </div>
-        <h3>Clé en main</h3>
-        <p>Base complète : scripts pré-installés, économie, jobs, factions, admin tools. Tu ouvres ton admin, tu paramètres, et c'est bon.</p>
+        <h3 data-i18n="features.f2.title">Turnkey</h3>
+        <p data-i18n="features.f2.body">Full base: pre-installed scripts, economy, jobs, factions, admin tools. You open your admin panel, configure, and you're good.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
         </div>
-        <h3>Updates régulières</h3>
-        <p>La base évolue en continu : nouveaux scripts, optimisations, corrections. Tu bénéficies de toutes les updates sans rien faire.</p>
+        <h3 data-i18n="features.f3.title">Regular updates</h3>
+        <p data-i18n="features.f3.body">The base evolves continuously: new scripts, optimizations, fixes. You get every update without lifting a finger.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
-        <h3>Support FR &amp; EN</h3>
-        <p>Tu parles à un dev, pas à un bot. Quand y'a un bug, la réponse vient de quelqu'un qui a codé le système. Support disponible en français et en anglais.</p>
+        <h3 data-i18n="features.f4.title">EN &amp; FR support</h3>
+        <p data-i18n="features.f4.body">You talk to a dev, not a bot. When there's a bug, the reply comes from someone who coded the system. Available in English and French.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
-        <h3>FiveM & RedM</h3>
-        <p>Un seul prestataire pour les deux univers. Côté RedM, tu bosses avec le <strong>#1 français</strong>, détenteur du record mondial à 650 joueurs connectés simultanément.</p>
+        <h3 data-i18n="features.f5.title">FiveM &amp; RedM</h3>
+        <p data-i18n="features.f5.body">One provider for both universes. On the RedM side, you work with the <strong>#1 French creator</strong>, holder of the world record at 650 players connected simultaneously.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
-        <h3>Scalable</h3>
-        <p>Tu commences à 128 slots et tu montes jusqu'à 2048 quand ta commu explose. Upgrade en 24h, sans interruption de service.</p>
+        <h3 data-i18n="features.f6.title">Scalable</h3>
+        <p data-i18n="features.f6.body">You start at 128 slots and scale up to 2048 when your community blows up. Upgrade in 24h, zero downtime.</p>
       </div>
     </div>
   </div>
@@ -1245,50 +1273,50 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
 <section class="timeline-bg">
   <div class="container">
     <div class="section-header">
-      <div class="eyebrow">// Process</div>
-      <h2 class="section-title">De zéro à<br>en ligne en <span class="em">5 jours</span>.</h2>
-      <p class="section-sub">Pas de mystère, pas d'attente floue. Un processus carré qui a fait ses preuves.</p>
+      <div class="eyebrow" data-i18n="timeline.eyebrow">// Process</div>
+      <h2 class="section-title" data-i18n="timeline.title">From zero to<br>live in <span class="em">5 days</span>.</h2>
+      <p class="section-sub" data-i18n="timeline.sub">No mystery, no vague waiting. A proven, tight process.</p>
     </div>
 
     <div class="timeline">
       <div class="step">
         <div class="step-num">01</div>
         <div class="step-content">
-          <div class="duration">JOUR 1</div>
-          <h3>Brief & paiement</h3>
-          <p>Tu choisis ton offre, tu règles le setup. On organise un call de 30 min pour cadrer tes besoins : thème du serveur, organisations, zones de map, branding.</p>
+          <div class="duration" data-i18n="timeline.s1.dur">DAY 1</div>
+          <h3 data-i18n="timeline.s1.title">Brief &amp; payment</h3>
+          <p data-i18n="timeline.s1.body">You pick your plan, you pay the setup. We run a 30-minute kickoff call to scope your needs: server theme, organizations, map zones, branding.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">02</div>
         <div class="step-content">
-          <div class="duration">JOUR 1-2</div>
-          <h3>Provisioning infra</h3>
-          <p>Ta machine est montée, blindée anti-DDoS, configurée selon ton tier. Doly s'occupe de tout : OS, réseau, monitoring, backups automatiques.</p>
+          <div class="duration" data-i18n="timeline.s2.dur">DAY 1-2</div>
+          <h3 data-i18n="timeline.s2.title">Infra provisioning</h3>
+          <p data-i18n="timeline.s2.body">Your machine is spun up, hardened with anti-DDoS, configured to your tier. Doly handles everything: OS, network, monitoring, automatic backups.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <div class="step-content">
-          <div class="duration">JOUR 2-4</div>
-          <h3>Déploiement base</h3>
-          <p>La base LastOne est déployée sur ton serveur avec tes personnalisations : jobs, factions, économie, téléphone classique, mappings gratuits.</p>
+          <div class="duration" data-i18n="timeline.s3.dur">DAY 2-4</div>
+          <h3 data-i18n="timeline.s3.title">Base deployment</h3>
+          <p data-i18n="timeline.s3.body">The LastOne base is deployed on your server with your customizations: jobs, factions, economy, classic phone, free mappings.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">04</div>
         <div class="step-content">
-          <div class="duration">JOUR 4-5</div>
-          <h3>Tests & livraison</h3>
-          <p>Battery de tests en conditions réelles. On te donne les accès admin, un guide complet et un canal Discord dédié pour ton support.</p>
+          <div class="duration" data-i18n="timeline.s4.dur">DAY 4-5</div>
+          <h3 data-i18n="timeline.s4.title">Testing &amp; delivery</h3>
+          <p data-i18n="timeline.s4.body">Real-world testing. We hand over admin access, a complete guide, and a dedicated Discord channel for your support.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">05</div>
         <div class="step-content">
-          <div class="duration">APRÈS</div>
-          <h3>Tu lances, on veille</h3>
-          <p>Tu ouvres ton serveur aux joueurs. Mises à jour régulières, monitoring 24/7, et ton équipe LastOne reste dispo en cas de besoin.</p>
+          <div class="duration" data-i18n="timeline.s5.dur">AFTER</div>
+          <h3 data-i18n="timeline.s5.title">You launch, we watch</h3>
+          <p data-i18n="timeline.s5.body">You open your server to players. Regular updates, 24/7 monitoring, and your LastOne team stays available whenever you need it.</p>
         </div>
       </div>
     </div>
@@ -1299,9 +1327,9 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
 <section id="pricing">
   <div class="container">
     <div class="section-header">
-      <div class="eyebrow">// Tarifs mensuels</div>
-      <h2 class="section-title">Choisis ton<br><span class="em">format</span>.</h2>
-      <p class="section-sub">Chaque palier double tes slots et ajoute du service. Pas de frais cachés, pas d'engagement bloqué. Change de tier quand tu veux.</p>
+      <div class="eyebrow" data-i18n="pricing.eyebrow">// Monthly pricing</div>
+      <h2 class="section-title" data-i18n="pricing.title">Pick your<br><span class="em">format</span>.</h2>
+      <p class="section-sub" data-i18n="pricing.sub">Each tier doubles your slots and adds more service. No hidden fees, no locked-in contract. Switch tier whenever you want.</p>
     </div>
 
     <div class="pricing-grid">
@@ -1309,139 +1337,139 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
       <div class="tier">
         <div class="tier-name">STARTER</div>
         <div class="tier-price"><span class="amount">390€</span></div>
-        <div class="tier-period">par mois</div>
+        <div class="tier-period" data-i18n="pricing.perMonth">per month</div>
         <div class="tier-divider"></div>
-        <div class="tier-slots">128 slots</div>
-        <div class="tier-rate">3,05€ par slot</div>
-        <div class="tier-target">Petite communauté</div>
+        <div class="tier-slots" data-i18n="pricing.starter.slots">128 slots</div>
+        <div class="tier-rate" data-i18n="pricing.starter.rate">3.05€ per slot</div>
+        <div class="tier-target" data-i18n="pricing.starter.target">Small community</div>
         <ul class="tier-features">
-          <li>Support standard</li>
-          <li>Mises à jour incluses</li>
-          <li>Anti-DDoS 24/7</li>
-          <li>Monitoring 24/7</li>
-          <li>Sans engagement</li>
+          <li data-i18n="pricing.starter.f1">Standard support</li>
+          <li data-i18n="pricing.starter.f2">Updates included</li>
+          <li data-i18n="pricing.starter.f3">Anti-DDoS 24/7</li>
+          <li data-i18n="pricing.starter.f4">Monitoring 24/7</li>
+          <li data-i18n="pricing.starter.f5">No commitment</li>
         </ul>
-        <button class="tier-cta">Commencer</button>
+        <button class="tier-cta" data-i18n="pricing.starter.cta">Get started</button>
       </div>
 
       <!-- Growth -->
       <div class="tier popular">
-        <div class="tier-badge">Populaire</div>
+        <div class="tier-badge" data-i18n="pricing.growth.badge">Popular</div>
         <div class="tier-name">GROWTH</div>
         <div class="tier-price"><span class="amount">590€</span></div>
-        <div class="tier-period">par mois</div>
+        <div class="tier-period" data-i18n="pricing.perMonth">per month</div>
         <div class="tier-divider"></div>
-        <div class="tier-slots">256 slots</div>
-        <div class="tier-rate">2,30€ par slot</div>
-        <div class="tier-target">Communauté active</div>
-        <div class="tier-pitch">+200€ → tu doubles les slots</div>
+        <div class="tier-slots" data-i18n="pricing.growth.slots">256 slots</div>
+        <div class="tier-rate" data-i18n="pricing.growth.rate">2.30€ per slot</div>
+        <div class="tier-target" data-i18n="pricing.growth.target">Active community</div>
+        <div class="tier-pitch" data-i18n="pricing.growth.pitch">+200€ → you double the slots</div>
         <ul class="tier-features">
-          <li>Support prioritaire</li>
-          <li>Mises à jour incluses</li>
-          <li>Anti-DDoS 24/7</li>
-          <li>Monitoring 24/7</li>
-          <li>Upgrade 24h sans downtime</li>
+          <li data-i18n="pricing.growth.f1">Priority support</li>
+          <li data-i18n="pricing.growth.f2">Updates included</li>
+          <li data-i18n="pricing.growth.f3">Anti-DDoS 24/7</li>
+          <li data-i18n="pricing.growth.f4">Monitoring 24/7</li>
+          <li data-i18n="pricing.growth.f5">24h upgrade, zero downtime</li>
         </ul>
-        <button class="tier-cta">Prendre Growth</button>
+        <button class="tier-cta" data-i18n="pricing.growth.cta">Choose Growth</button>
       </div>
 
       <!-- Pro -->
       <div class="tier">
         <div class="tier-name">PRO</div>
         <div class="tier-price"><span class="amount">880€</span></div>
-        <div class="tier-period">par mois</div>
+        <div class="tier-period" data-i18n="pricing.perMonth">per month</div>
         <div class="tier-divider"></div>
-        <div class="tier-slots">512 slots</div>
-        <div class="tier-rate">1,72€ par slot</div>
-        <div class="tier-target">Serveur établi</div>
-        <div class="tier-pitch">+290€ → 2× les slots + dev custom</div>
+        <div class="tier-slots" data-i18n="pricing.pro.slots">512 slots</div>
+        <div class="tier-rate" data-i18n="pricing.pro.rate">1.72€ per slot</div>
+        <div class="tier-target" data-i18n="pricing.pro.target">Established server</div>
+        <div class="tier-pitch" data-i18n="pricing.pro.pitch">+290€ → 2× the slots + custom dev</div>
         <ul class="tier-features">
-          <li>Support prioritaire</li>
-          <li>2h dev custom/mois</li>
-          <li>Anti-DDoS 24/7</li>
-          <li>Monitoring 24/7</li>
-          <li>Upgrade 24h sans downtime</li>
+          <li data-i18n="pricing.pro.f1">Priority support</li>
+          <li data-i18n="pricing.pro.f2">2h custom dev/month</li>
+          <li data-i18n="pricing.pro.f3">Anti-DDoS 24/7</li>
+          <li data-i18n="pricing.pro.f4">Monitoring 24/7</li>
+          <li data-i18n="pricing.pro.f5">24h upgrade, zero downtime</li>
         </ul>
-        <button class="tier-cta">Prendre Pro</button>
+        <button class="tier-cta" data-i18n="pricing.pro.cta">Choose Pro</button>
       </div>
 
       <!-- Elite -->
       <div class="tier best">
-        <div class="tier-badge">Meilleur choix</div>
+        <div class="tier-badge" data-i18n="pricing.elite.badge">Best value</div>
         <div class="tier-name">ELITE</div>
         <div class="tier-price"><span class="amount">1290€</span></div>
-        <div class="tier-period">par mois</div>
+        <div class="tier-period" data-i18n="pricing.perMonth">per month</div>
         <div class="tier-divider"></div>
-        <div class="tier-slots">1024 slots</div>
-        <div class="tier-rate">1,26€ par slot</div>
-        <div class="tier-target">Grande communauté</div>
-        <div class="tier-pitch">+410€ → 2× les slots + machine dédiée</div>
+        <div class="tier-slots" data-i18n="pricing.elite.slots">1024 slots</div>
+        <div class="tier-rate" data-i18n="pricing.elite.rate">1.26€ per slot</div>
+        <div class="tier-target" data-i18n="pricing.elite.target">Large community</div>
+        <div class="tier-pitch" data-i18n="pricing.elite.pitch">+410€ → 2× the slots + dedicated machine</div>
         <ul class="tier-features">
-          <li>Support VIP 24/7</li>
-          <li>5h dev custom/mois</li>
-          <li>Machine dédiée</li>
-          <li>Anti-DDoS 24/7</li>
-          <li>Monitoring 24/7</li>
+          <li data-i18n="pricing.elite.f1">VIP support 24/7</li>
+          <li data-i18n="pricing.elite.f2">5h custom dev/month</li>
+          <li data-i18n="pricing.elite.f3">Dedicated machine</li>
+          <li data-i18n="pricing.elite.f4">Anti-DDoS 24/7</li>
+          <li data-i18n="pricing.elite.f5">Monitoring 24/7</li>
         </ul>
-        <button class="tier-cta">Prendre Elite</button>
+        <button class="tier-cta" data-i18n="pricing.elite.cta">Choose Elite</button>
       </div>
 
       <!-- Ultimate -->
       <div class="tier premium">
-        <div class="tier-badge">Premium</div>
+        <div class="tier-badge" data-i18n="pricing.ultimate.badge">Premium</div>
         <div class="tier-name">ULTIMATE</div>
         <div class="tier-price"><span class="amount">1790€</span></div>
-        <div class="tier-period">par mois</div>
+        <div class="tier-period" data-i18n="pricing.perMonth">per month</div>
         <div class="tier-divider"></div>
-        <div class="tier-slots">2048 slots</div>
-        <div class="tier-rate">0,87€ par slot</div>
-        <div class="tier-target">Infrastructure max</div>
-        <div class="tier-pitch">Slots max — limite OneSync Infinity</div>
+        <div class="tier-slots" data-i18n="pricing.ultimate.slots">2048 slots</div>
+        <div class="tier-rate" data-i18n="pricing.ultimate.rate">0.87€ per slot</div>
+        <div class="tier-target" data-i18n="pricing.ultimate.target">Max infrastructure</div>
+        <div class="tier-pitch" data-i18n="pricing.ultimate.pitch">Max slots — OneSync Infinity ceiling</div>
         <ul class="tier-features">
-          <li>Support VIP 24/7</li>
-          <li>10h dev custom/mois</li>
-          <li>Machine premium</li>
-          <li>Anti-DDoS 24/7</li>
-          <li>Monitoring 24/7</li>
+          <li data-i18n="pricing.ultimate.f1">VIP support 24/7</li>
+          <li data-i18n="pricing.ultimate.f2">10h custom dev/month</li>
+          <li data-i18n="pricing.ultimate.f3">Premium machine</li>
+          <li data-i18n="pricing.ultimate.f4">Anti-DDoS 24/7</li>
+          <li data-i18n="pricing.ultimate.f5">Monitoring 24/7</li>
         </ul>
-        <button class="tier-cta">Prendre Ultimate</button>
+        <button class="tier-cta" data-i18n="pricing.ultimate.cta">Choose Ultimate</button>
       </div>
     </div>
 
     <div class="pricing-notes">
       <div class="pricing-note">
-        <div class="pricing-note-label">Installation</div>
-        <div class="pricing-note-value">3 à 5 jours</div>
+        <div class="pricing-note-label" data-i18n="pricing.note1.label">Installation</div>
+        <div class="pricing-note-value" data-i18n="pricing.note1.value">3 to 5 days</div>
       </div>
       <div class="pricing-note">
-        <div class="pricing-note-label">Frais de setup</div>
-        <div class="pricing-note-value">250€ à l'activation</div>
+        <div class="pricing-note-label" data-i18n="pricing.note2.label">Setup fee</div>
+        <div class="pricing-note-value" data-i18n="pricing.note2.value">250€ on activation</div>
       </div>
       <div class="pricing-note">
-        <div class="pricing-note-label">Paiement annuel</div>
-        <div class="pricing-note-value"><span class="em">-10%</span> sur toute offre</div>
+        <div class="pricing-note-label" data-i18n="pricing.note3.label">Annual payment</div>
+        <div class="pricing-note-value" data-i18n="pricing.note3.value"><span class="em">-10%</span> on any plan</div>
       </div>
     </div>
 
     <div class="included-wrapper">
       <div class="included-box yes">
-        <div class="label">// INCLUS DANS TOUTES LES OFFRES</div>
+        <div class="label" data-i18n="included.yes.label">// INCLUDED IN EVERY PLAN</div>
         <ul class="included-list">
-          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Base FiveM ou RedM</li>
-          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Protection Anti-DDoS 24/7</li>
-          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Monitoring 24/7</li>
-          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Backups automatiques</li>
-          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Mises à jour</li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="included.yes.i1">FiveM or RedM base</span></li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="included.yes.i2">Anti-DDoS 24/7 protection</span></li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="included.yes.i3">Monitoring 24/7</span></li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="included.yes.i4">Automatic backups</span></li>
+          <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="included.yes.i5">Updates</span></li>
         </ul>
       </div>
       <div class="included-box no">
-        <div class="label">// TU ACHÈTES — ET TU GARDES À VIE</div>
+        <div class="label" data-i18n="included.no.label">// YOU BUY — AND YOU KEEP FOR LIFE</div>
         <ul class="included-list">
-          <li>Abonnement CFX</li>
-          <li>Téléphone premium (optionnel)</li>
-          <li>Mappings premium (optionnels)</li>
+          <li data-i18n="included.no.i1">CFX subscription</li>
+          <li data-i18n="included.no.i2">Premium phone (optional)</li>
+          <li data-i18n="included.no.i3">Premium mappings (optional)</li>
         </ul>
-        <div class="ownership-note">Ces éléments t'appartiennent. Si un jour tu pars ou testes ailleurs, tu repars avec ton abonnement CFX, ton téléphone et tes mappings. Zéro vendor lock-in — tu perds rien.</div>
+        <div class="ownership-note" data-i18n="included.no.note">These belong to you. If you ever leave or try something else, you walk away with your CFX subscription, your phone and your mappings. Zero vendor lock-in — you lose nothing.</div>
       </div>
     </div>
   </div>
@@ -1451,9 +1479,9 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
 <section id="addons" class="addons-bg">
   <div class="container">
     <div class="section-header">
-      <div class="eyebrow">// Modules additionnels</div>
-      <h2 class="section-title">Boost ton serveur<br>avec des <span class="em">add-ons</span>.</h2>
-      <p class="section-sub">Packages cumulables à n'importe quelle offre. Ajoute ou retire selon les besoins de ta communauté.</p>
+      <div class="eyebrow" data-i18n="addons.eyebrow">// Add-on modules</div>
+      <h2 class="section-title" data-i18n="addons.title">Boost your server<br>with <span class="em">add-ons</span>.</h2>
+      <p class="section-sub" data-i18n="addons.sub">Stackable packages on any plan. Add or remove based on your community's needs.</p>
     </div>
 
     <div class="addons-grid">
@@ -1463,11 +1491,11 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
         </div>
         <div class="addon-info">
           <div class="addon-name">MDT EMS</div>
-          <div class="addon-desc">Terminal médical pour les services de santé</div>
+          <div class="addon-desc" data-i18n="addons.ems.desc">Medical terminal for healthcare services</div>
         </div>
         <div class="addon-price">
           <span class="amount">30€</span>
-          <span class="period">/MOIS</span>
+          <span class="period" data-i18n="addons.perMonth">/MO</span>
         </div>
       </div>
 
@@ -1477,11 +1505,11 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
         </div>
         <div class="addon-info">
           <div class="addon-name">MDT LSPD</div>
-          <div class="addon-desc">Terminal police avec dossiers et convocations</div>
+          <div class="addon-desc" data-i18n="addons.lspd.desc">Police terminal with records and summons</div>
         </div>
         <div class="addon-price">
           <span class="amount">35€</span>
-          <span class="period">/MOIS</span>
+          <span class="period" data-i18n="addons.perMonth">/MO</span>
         </div>
       </div>
 
@@ -1490,12 +1518,12 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <div class="addon-info">
-          <div class="addon-name">Pack MDT complet</div>
-          <div class="addon-desc">MDT EMS + LSPD groupés — économise 15€/mois</div>
+          <div class="addon-name" data-i18n="addons.pack.name">Full MDT pack</div>
+          <div class="addon-desc" data-i18n="addons.pack.desc">MDT EMS + LSPD bundled — save 15€/month</div>
         </div>
         <div class="addon-price">
           <span class="amount">50€</span>
-          <span class="period">/MOIS</span>
+          <span class="period" data-i18n="addons.perMonth">/MO</span>
         </div>
       </div>
 
@@ -1504,12 +1532,12 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>
         </div>
         <div class="addon-info">
-          <div class="addon-name">Pack véhicules</div>
-          <div class="addon-desc">Véhicules lore-friendly police et civils</div>
+          <div class="addon-name" data-i18n="addons.vehicles.name">Vehicle pack</div>
+          <div class="addon-desc" data-i18n="addons.vehicles.desc">Lore-friendly police and civilian vehicles</div>
         </div>
         <div class="addon-price">
           <span class="amount">80€</span>
-          <span class="period">/MOIS</span>
+          <span class="period" data-i18n="addons.perMonth">/MO</span>
         </div>
       </div>
     </div>
@@ -1520,59 +1548,59 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
 <section id="faq">
   <div class="container">
     <div class="section-header">
-      <div class="eyebrow">// Questions fréquentes</div>
-      <h2 class="section-title">Avant d'<span class="em">acheter</span>.</h2>
+      <div class="eyebrow" data-i18n="faq.eyebrow">// Frequently asked</div>
+      <h2 class="section-title" data-i18n="faq.title">Before you <span class="em">buy</span>.</h2>
     </div>
 
     <div class="faq-grid">
       <div class="faq">
         <div class="faq-q">
-          <span>Je démarre avec peu de joueurs, est-ce que le Starter est rentable pour moi ?</span>
+          <span data-i18n="faq.q1">I'm starting with few players — is Starter worth it for me?</span>
           <span class="faq-toggle">+</span>
         </div>
-        <div class="faq-a">Oui. Le Starter à 390€/mois te donne 128 slots, une vraie protection anti-DDoS et une base pro que tu ne pourrais pas avoir en louant seul chez un hébergeur classique. Tu lances petit, et tu montes de tier quand ta communauté grandit — sans interruption de service.</div>
+        <div class="faq-a" data-i18n="faq.a1">Yes. Starter at 390€/month gives you 128 slots, real anti-DDoS protection and a pro base you couldn't get renting solo from a classic host. You launch small, and you scale up when your community grows — zero downtime.</div>
       </div>
       <div class="faq">
         <div class="faq-q">
-          <span>Qu'est-ce qui n'est PAS inclus exactement ?</span>
+          <span data-i18n="faq.q2">What is NOT included exactly?</span>
           <span class="faq-toggle">+</span>
         </div>
-        <div class="faq-a">Trois choses seulement : ton abonnement CFX (obligatoire, à prendre directement chez Cfx.re), le téléphone premium si tu en veux un plus avancé que le classique déjà inclus, et les mappings premium. Tout le reste — base, scripts, hébergement, DDoS, support, updates — est dans ton forfait.</div>
+        <div class="faq-a" data-i18n="faq.a2">Only three things: your CFX subscription (mandatory, to purchase directly at Cfx.re), the premium phone if you want a more advanced one than the classic already included, and premium mappings. Everything else — base, scripts, hosting, DDoS, support, updates — is in your plan.</div>
       </div>
       <div class="faq">
         <div class="faq-q">
-          <span>Je peux changer de tier en cours de route ?</span>
+          <span data-i18n="faq.q3">Can I switch tier while running?</span>
           <span class="faq-toggle">+</span>
         </div>
-        <div class="faq-a">Oui, upgrade en 24h, sans downtime, sans refaire un setup. Le downgrade est possible en fin de mois. Si ta commu explose, tu montes de tier. Si tu ralentis, tu redescends.</div>
+        <div class="faq-a" data-i18n="faq.a3">Yes — upgrade in 24h, zero downtime, no new setup. Downgrade takes effect at the end of the month. If your community blows up, you go up. If you slow down, you come back down.</div>
       </div>
       <div class="faq">
         <div class="faq-q">
-          <span>Pourquoi 5 jours d'installation ?</span>
+          <span data-i18n="faq.q4">Why 5 days for installation?</span>
           <span class="faq-toggle">+</span>
         </div>
-        <div class="faq-a">Parce qu'on ne livre pas un template générique. Chaque serveur est provisionné, configuré, testé, personnalisé selon tes besoins. Tu reçois un produit qui marche le jour 5, pas un chantier qui marche vaguement le jour 1.</div>
+        <div class="faq-a" data-i18n="faq.a4">Because we don't ship a generic template. Every server is provisioned, configured, tested and customized to your needs. You receive a product that works on day 5, not a half-built construction site that kinda works on day 1.</div>
       </div>
       <div class="faq">
         <div class="faq-q">
-          <span>Vos dévs font quoi en dev custom ?</span>
+          <span data-i18n="faq.q5">What do your devs actually do with the custom-dev hours?</span>
           <span class="faq-toggle">+</span>
         </div>
-        <div class="faq-a">Pour les tiers Pro, Elite, Ultimate tu as un crédit d'heures mensuelles (2h, 5h, 10h). Ces heures servent à coder ce que tu veux : nouvelles jobs, ajustements d'économie, events custom, intégrations. Les heures non utilisées ne reportent pas.</div>
+        <div class="faq-a" data-i18n="faq.a5">On Pro, Elite and Ultimate tiers you get a monthly hours credit (2h, 5h, 10h). Those hours are for coding whatever you want: new jobs, economy tweaks, custom events, integrations. Unused hours don't roll over.</div>
       </div>
       <div class="faq">
         <div class="faq-q">
-          <span>C'est quoi votre différence avec un ZAP ou un hébergeur classique ?</span>
+          <span data-i18n="faq.q6">What's your difference vs ZAP or a classic host?</span>
           <span class="faq-toggle">+</span>
         </div>
-        <div class="faq-a">Un hébergeur te loue une boîte vide. LastOne te livre une base custom développée sur 10 ans, avec scripts pré-installés, un support assuré par les devs qui ont codé le système, et des updates régulières. Tu paies plus, tu gagnes des mois de travail.</div>
+        <div class="faq-a" data-i18n="faq.a6">A host rents you an empty box. LastOne ships you a custom base developed over 10 years, pre-installed scripts, support handled by the devs who coded the system, and regular updates. You pay more, you save months of work.</div>
       </div>
       <div class="faq">
         <div class="faq-q">
-          <span>Engagement mensuel ou annuel ?</span>
+          <span data-i18n="faq.q7">Monthly or annual commitment?</span>
           <span class="faq-toggle">+</span>
         </div>
-        <div class="faq-a">Pas d'engagement. Tu paies au mois, résiliation à tout moment avant la fin du mois en cours. Si tu veux prendre un paiement annuel en avance, tu bénéficies de -10% sur l'offre complète.</div>
+        <div class="faq-a" data-i18n="faq.a7">No commitment. You pay monthly, cancel any time before the end of the current month. If you want to prepay annually, you get -10% on the full plan.</div>
       </div>
     </div>
   </div>
@@ -1581,17 +1609,17 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
 <!-- FINAL CTA -->
 <section id="cta" class="cta-bg">
   <div class="container cta-content">
-    <div class="eyebrow">// Places limitées ce mois-ci</div>
-    <h2 class="cta-title">Ta communauté<br><span class="em">t'attend.</span></h2>
-    <p class="cta-sub">
-      Chaque jour sans serveur, c'est des joueurs qui partent ailleurs. On installe en 5 jours.
-      Fais le calcul.
+    <div class="eyebrow" data-i18n="cta.eyebrow">// Limited spots this month</div>
+    <h2 class="cta-title" data-i18n="cta.title">Your community<br><span class="em">is waiting.</span></h2>
+    <p class="cta-sub" data-i18n="cta.sub">
+      Every day without a server is players leaving for somewhere else. We install in 5 days.
+      Do the math.
     </p>
     <div class="cta-buttons">
-      <a href="#pricing" class="btn btn-primary btn-lg">Choisir mon offre →</a>
-      <a href="https://discord.gg/PTgRv5z3u5" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">Rejoindre le Discord</a>
+      <a href="#pricing" class="btn btn-primary btn-lg" data-i18n="cta.btnPrimary">Pick my plan →</a>
+      <a href="https://discord.gg/PTgRv5z3u5" class="btn btn-ghost btn-lg" target="_blank" rel="noopener" data-i18n="cta.btnGhost">Join the Discord</a>
     </div>
-    <div class="cta-note">RÉPONSE SOUS 2H · LUNDI–SAMEDI · 9H–23H</div>
+    <div class="cta-note" data-i18n="cta.note">REPLY WITHIN 2H · MONDAY–SATURDAY · 9AM–11PM</div>
   </div>
 </section>
 
@@ -1604,38 +1632,38 @@ html.js .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.48s; }
           <span class="logo-dot"></span>
           LASTONE
         </a>
-        <p>Location de serveurs FiveM &amp; RedM clé en main, par des devs avec 10 ans d'expérience. Base custom, anti-DDoS, support FR / EN.</p>
-        <a href="https://discord.gg/PTgRv5z3u5" target="_blank" rel="noopener" class="footer-discord">Rejoindre le Discord →</a>
+        <p data-i18n="footer.about">Turnkey FiveM &amp; RedM server hosting, by devs with 10 years of experience. Custom base, anti-DDoS, EN / FR support.</p>
+        <a href="https://discord.gg/PTgRv5z3u5" target="_blank" rel="noopener" class="footer-discord" data-i18n="footer.discord">Join the Discord →</a>
       </div>
       <div class="footer-col">
-        <h4>Produit</h4>
+        <h4 data-i18n="footer.product">Product</h4>
         <ul>
-          <li><a href="#pricing">Tarifs</a></li>
-          <li><a href="#addons">Add-ons</a></li>
-          <li><a href="#features">Fonctionnalités</a></li>
+          <li><a href="#pricing" data-i18n="footer.pricing">Pricing</a></li>
+          <li><a href="#addons" data-i18n="footer.addons">Add-ons</a></li>
+          <li><a href="#features" data-i18n="footer.features">Features</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Équipe</h4>
+        <h4 data-i18n="footer.team">Team</h4>
         <ul>
-          <li>Dév principal (DVR)</li>
-          <li>Infra (Doly)</li>
-          <li>Dév (dKS)</li>
-          <li>Mapping (IProMx)</li>
+          <li data-i18n="footer.team.lead">Lead dev (DVR)</li>
+          <li data-i18n="footer.team.infra">Infra (Doly)</li>
+          <li data-i18n="footer.team.dev">Dev (dKS)</li>
+          <li data-i18n="footer.team.mapping">Mapping (IProMx)</li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Partenaires add-ons</h4>
+        <h4 data-i18n="footer.partners">Add-on partners</h4>
         <ul>
-          <li>Medouille <span class="footer-sub">— MDT EMS / LSPD</span></li>
-          <li>๖̶̶̶RyZzen <span class="footer-sub">— Pack véhicules</span></li>
+          <li>Medouille <span class="footer-sub" data-i18n="footer.partners.mdt">— MDT EMS / LSPD</span></li>
+          <li>๖̶̶̶RyZzen <span class="footer-sub" data-i18n="footer.partners.vehicles">— Vehicle pack</span></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 LASTONE — TOUS DROITS RÉSERVÉS</div>
-      <div>FIVEM & REDM · SERVEURS CUSTOM FR</div>
+      <div data-i18n="footer.copyright">© 2026 LASTONE — ALL RIGHTS RESERVED</div>
+      <div data-i18n="footer.tagline">FIVEM &amp; REDM · CUSTOM SERVERS · EN / FR</div>
     </div>
   </div>
 </footer>
@@ -1685,6 +1713,261 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll(".reveal, .reveal-stagger").forEach(el => {
   revealObserver.observe(el);
 });
+
+// ============== I18N (EN default, FR toggle) ==============
+const FR = {
+  "meta.title": "LASTONE — Location de serveurs FiveM & RedM clé en main",
+  "meta.description": "Base complète, anti-DDoS, 10 ans d'expérience. Le #1 français sur RedM (record mondial : 650 joueurs connectés) dans l'équipe. Lance ton serveur FiveM ou RedM en 3 à 5 jours.",
+
+  "nav.features": "Fonctionnalités",
+  "nav.pricing": "Tarifs",
+  "nav.addons": "Add-ons",
+  "nav.faq": "FAQ",
+  "nav.cta": "Réserver",
+
+  "hero.badge": "Lancement officiel — places limitées",
+  "hero.h1": `Lance ton serveur<br>\n      <span class="strike">en 6 mois</span> <span class="accent">en 5 jours.</span>`,
+  "hero.sub": `Base FiveM ou RedM complète, machine protégée anti-DDoS, scripts premium et 10 ans d'expérience derrière chaque ligne de code. Dans l'équipe : le <strong>#1 français sur RedM</strong>, détenteur du record mondial à <strong>650 joueurs connectés simultanément</strong>. Tu ouvres, on livre.`,
+  "hero.ctaPrimary": "Voir les offres →",
+  "hero.ctaGhost": "Comment ça marche",
+  "hero.stat1.num": `<span class="u">10</span> ans`,
+  "hero.stat1.label": "D'expérience FiveM",
+  "hero.stat2.num": `<span class="u">650</span><span class="num-suffix">joueurs</span>`,
+  "hero.stat2.label": "Record mondial RedM",
+  "hero.stat3.num": "3–5 jours",
+  "hero.stat3.label": "Installation",
+  "hero.stat4.label": "Anti-DDoS",
+
+  "ticker.base": `BASE CUSTOM<span class="dot"></span>`,
+  "ticker.devs": `DÉVELOPPEURS SENIORS<span class="dot"></span>`,
+  "ticker.support": `SUPPORT FR / EN<span class="dot"></span>`,
+  "ticker.setup": `SETUP 3-5 JOURS<span class="dot"></span>`,
+
+  "features.eyebrow": "// Pourquoi LastOne",
+  "features.title": `Une base qu'on<br>a <span class="em">peaufiné</span> 10 ans.`,
+  "features.sub": "Pendant que d'autres galèrent à installer un serveur de zéro, toi tu hérites d'une décennie d'optimisations, de corrections et d'itérations. Tu ouvres, c'est déjà rodé.",
+  "features.f1.title": "Machine blindée",
+  "features.f1.body": "Protection anti-DDoS 24/7 déjà configurée. Tes joueurs ne voient jamais une déconnexion causée par une attaque. On s'en occupe.",
+  "features.f2.title": "Clé en main",
+  "features.f2.body": "Base complète : scripts pré-installés, économie, jobs, factions, admin tools. Tu ouvres ton admin, tu paramètres, et c'est bon.",
+  "features.f3.title": "Updates régulières",
+  "features.f3.body": "La base évolue en continu : nouveaux scripts, optimisations, corrections. Tu bénéficies de toutes les updates sans rien faire.",
+  "features.f4.title": "Support FR &amp; EN",
+  "features.f4.body": "Tu parles à un dev, pas à un bot. Quand y'a un bug, la réponse vient de quelqu'un qui a codé le système. Support disponible en français et en anglais.",
+  "features.f5.title": "FiveM &amp; RedM",
+  "features.f5.body": `Un seul prestataire pour les deux univers. Côté RedM, tu bosses avec le <strong>#1 français</strong>, détenteur du record mondial à 650 joueurs connectés simultanément.`,
+  "features.f6.title": "Scalable",
+  "features.f6.body": "Tu commences à 128 slots et tu montes jusqu'à 2048 quand ta commu explose. Upgrade en 24h, sans interruption de service.",
+
+  "timeline.eyebrow": "// Process",
+  "timeline.title": `De zéro à<br>en ligne en <span class="em">5 jours</span>.`,
+  "timeline.sub": "Pas de mystère, pas d'attente floue. Un processus carré qui a fait ses preuves.",
+  "timeline.s1.dur": "JOUR 1",
+  "timeline.s1.title": "Brief &amp; paiement",
+  "timeline.s1.body": "Tu choisis ton offre, tu règles le setup. On organise un call de 30 min pour cadrer tes besoins : thème du serveur, organisations, zones de map, branding.",
+  "timeline.s2.dur": "JOUR 1-2",
+  "timeline.s2.title": "Provisioning infra",
+  "timeline.s2.body": "Ta machine est montée, blindée anti-DDoS, configurée selon ton tier. Doly s'occupe de tout : OS, réseau, monitoring, backups automatiques.",
+  "timeline.s3.dur": "JOUR 2-4",
+  "timeline.s3.title": "Déploiement base",
+  "timeline.s3.body": "La base LastOne est déployée sur ton serveur avec tes personnalisations : jobs, factions, économie, téléphone classique, mappings gratuits.",
+  "timeline.s4.dur": "JOUR 4-5",
+  "timeline.s4.title": "Tests &amp; livraison",
+  "timeline.s4.body": "Battery de tests en conditions réelles. On te donne les accès admin, un guide complet et un canal Discord dédié pour ton support.",
+  "timeline.s5.dur": "APRÈS",
+  "timeline.s5.title": "Tu lances, on veille",
+  "timeline.s5.body": "Tu ouvres ton serveur aux joueurs. Mises à jour régulières, monitoring 24/7, et ton équipe LastOne reste dispo en cas de besoin.",
+
+  "pricing.eyebrow": "// Tarifs mensuels",
+  "pricing.title": `Choisis ton<br><span class="em">format</span>.`,
+  "pricing.sub": "Chaque palier double tes slots et ajoute du service. Pas de frais cachés, pas d'engagement bloqué. Change de tier quand tu veux.",
+  "pricing.perMonth": "par mois",
+
+  "pricing.starter.slots": "128 slots",
+  "pricing.starter.rate": "3,05€ par slot",
+  "pricing.starter.target": "Petite communauté",
+  "pricing.starter.f1": "Support standard",
+  "pricing.starter.f2": "Mises à jour incluses",
+  "pricing.starter.f3": "Anti-DDoS 24/7",
+  "pricing.starter.f4": "Monitoring 24/7",
+  "pricing.starter.f5": "Sans engagement",
+  "pricing.starter.cta": "Commencer",
+
+  "pricing.growth.badge": "Populaire",
+  "pricing.growth.slots": "256 slots",
+  "pricing.growth.rate": "2,30€ par slot",
+  "pricing.growth.target": "Communauté active",
+  "pricing.growth.pitch": "+200€ → tu doubles les slots",
+  "pricing.growth.f1": "Support prioritaire",
+  "pricing.growth.f2": "Mises à jour incluses",
+  "pricing.growth.f3": "Anti-DDoS 24/7",
+  "pricing.growth.f4": "Monitoring 24/7",
+  "pricing.growth.f5": "Upgrade 24h sans downtime",
+  "pricing.growth.cta": "Prendre Growth",
+
+  "pricing.pro.slots": "512 slots",
+  "pricing.pro.rate": "1,72€ par slot",
+  "pricing.pro.target": "Serveur établi",
+  "pricing.pro.pitch": "+290€ → 2× les slots + dev custom",
+  "pricing.pro.f1": "Support prioritaire",
+  "pricing.pro.f2": "2h dev custom/mois",
+  "pricing.pro.f3": "Anti-DDoS 24/7",
+  "pricing.pro.f4": "Monitoring 24/7",
+  "pricing.pro.f5": "Upgrade 24h sans downtime",
+  "pricing.pro.cta": "Prendre Pro",
+
+  "pricing.elite.badge": "Meilleur choix",
+  "pricing.elite.slots": "1024 slots",
+  "pricing.elite.rate": "1,26€ par slot",
+  "pricing.elite.target": "Grande communauté",
+  "pricing.elite.pitch": "+410€ → 2× les slots + machine dédiée",
+  "pricing.elite.f1": "Support VIP 24/7",
+  "pricing.elite.f2": "5h dev custom/mois",
+  "pricing.elite.f3": "Machine dédiée",
+  "pricing.elite.f4": "Anti-DDoS 24/7",
+  "pricing.elite.f5": "Monitoring 24/7",
+  "pricing.elite.cta": "Prendre Elite",
+
+  "pricing.ultimate.badge": "Premium",
+  "pricing.ultimate.slots": "2048 slots",
+  "pricing.ultimate.rate": "0,87€ par slot",
+  "pricing.ultimate.target": "Infrastructure max",
+  "pricing.ultimate.pitch": "Slots max — limite OneSync Infinity",
+  "pricing.ultimate.f1": "Support VIP 24/7",
+  "pricing.ultimate.f2": "10h dev custom/mois",
+  "pricing.ultimate.f3": "Machine premium",
+  "pricing.ultimate.f4": "Anti-DDoS 24/7",
+  "pricing.ultimate.f5": "Monitoring 24/7",
+  "pricing.ultimate.cta": "Prendre Ultimate",
+
+  "pricing.note1.label": "Installation",
+  "pricing.note1.value": "3 à 5 jours",
+  "pricing.note2.label": "Frais de setup",
+  "pricing.note2.value": "250€ à l'activation",
+  "pricing.note3.label": "Paiement annuel",
+  "pricing.note3.value": `<span class="em">-10%</span> sur toute offre`,
+
+  "included.yes.label": "// INCLUS DANS TOUTES LES OFFRES",
+  "included.yes.i1": "Base FiveM ou RedM",
+  "included.yes.i2": "Protection Anti-DDoS 24/7",
+  "included.yes.i3": "Monitoring 24/7",
+  "included.yes.i4": "Backups automatiques",
+  "included.yes.i5": "Mises à jour",
+
+  "included.no.label": "// TU ACHÈTES — ET TU GARDES À VIE",
+  "included.no.i1": "Abonnement CFX",
+  "included.no.i2": "Téléphone premium (optionnel)",
+  "included.no.i3": "Mappings premium (optionnels)",
+  "included.no.note": "Ces éléments t'appartiennent. Si un jour tu pars ou testes ailleurs, tu repars avec ton abonnement CFX, ton téléphone et tes mappings. Zéro vendor lock-in — tu perds rien.",
+
+  "addons.eyebrow": "// Modules additionnels",
+  "addons.title": `Boost ton serveur<br>avec des <span class="em">add-ons</span>.`,
+  "addons.sub": "Packages cumulables à n'importe quelle offre. Ajoute ou retire selon les besoins de ta communauté.",
+  "addons.ems.desc": "Terminal médical pour les services de santé",
+  "addons.lspd.desc": "Terminal police avec dossiers et convocations",
+  "addons.pack.name": "Pack MDT complet",
+  "addons.pack.desc": "MDT EMS + LSPD groupés — économise 15€/mois",
+  "addons.vehicles.name": "Pack véhicules",
+  "addons.vehicles.desc": "Véhicules lore-friendly police et civils",
+  "addons.perMonth": "/MOIS",
+
+  "faq.eyebrow": "// Questions fréquentes",
+  "faq.title": `Avant d'<span class="em">acheter</span>.`,
+  "faq.q1": "Je démarre avec peu de joueurs, est-ce que le Starter est rentable pour moi ?",
+  "faq.a1": "Oui. Le Starter à 390€/mois te donne 128 slots, une vraie protection anti-DDoS et une base pro que tu ne pourrais pas avoir en louant seul chez un hébergeur classique. Tu lances petit, et tu montes de tier quand ta communauté grandit — sans interruption de service.",
+  "faq.q2": "Qu'est-ce qui n'est PAS inclus exactement ?",
+  "faq.a2": "Trois choses seulement : ton abonnement CFX (obligatoire, à prendre directement chez Cfx.re), le téléphone premium si tu en veux un plus avancé que le classique déjà inclus, et les mappings premium. Tout le reste — base, scripts, hébergement, DDoS, support, updates — est dans ton forfait.",
+  "faq.q3": "Je peux changer de tier en cours de route ?",
+  "faq.a3": "Oui, upgrade en 24h, sans downtime, sans refaire un setup. Le downgrade est possible en fin de mois. Si ta commu explose, tu montes de tier. Si tu ralentis, tu redescends.",
+  "faq.q4": "Pourquoi 5 jours d'installation ?",
+  "faq.a4": "Parce qu'on ne livre pas un template générique. Chaque serveur est provisionné, configuré, testé, personnalisé selon tes besoins. Tu reçois un produit qui marche le jour 5, pas un chantier qui marche vaguement le jour 1.",
+  "faq.q5": "Vos dévs font quoi en dev custom ?",
+  "faq.a5": "Pour les tiers Pro, Elite, Ultimate tu as un crédit d'heures mensuelles (2h, 5h, 10h). Ces heures servent à coder ce que tu veux : nouvelles jobs, ajustements d'économie, events custom, intégrations. Les heures non utilisées ne reportent pas.",
+  "faq.q6": "C'est quoi votre différence avec un ZAP ou un hébergeur classique ?",
+  "faq.a6": "Un hébergeur te loue une boîte vide. LastOne te livre une base custom développée sur 10 ans, avec scripts pré-installés, un support assuré par les devs qui ont codé le système, et des updates régulières. Tu paies plus, tu gagnes des mois de travail.",
+  "faq.q7": "Engagement mensuel ou annuel ?",
+  "faq.a7": "Pas d'engagement. Tu paies au mois, résiliation à tout moment avant la fin du mois en cours. Si tu veux prendre un paiement annuel en avance, tu bénéficies de -10% sur l'offre complète.",
+
+  "cta.eyebrow": "// Places limitées ce mois-ci",
+  "cta.title": `Ta communauté<br><span class="em">t'attend.</span>`,
+  "cta.sub": "Chaque jour sans serveur, c'est des joueurs qui partent ailleurs. On installe en 5 jours.\n      Fais le calcul.",
+  "cta.btnPrimary": "Choisir mon offre →",
+  "cta.btnGhost": "Rejoindre le Discord",
+  "cta.note": "RÉPONSE SOUS 2H · LUNDI–SAMEDI · 9H–23H",
+
+  "footer.about": "Location de serveurs FiveM &amp; RedM clé en main, par des devs avec 10 ans d'expérience. Base custom, anti-DDoS, support FR / EN.",
+  "footer.discord": "Rejoindre le Discord →",
+  "footer.product": "Produit",
+  "footer.pricing": "Tarifs",
+  "footer.addons": "Add-ons",
+  "footer.features": "Fonctionnalités",
+  "footer.team": "Équipe",
+  "footer.team.lead": "Dév principal (DVR)",
+  "footer.team.infra": "Infra (Doly)",
+  "footer.team.dev": "Dév (dKS)",
+  "footer.team.mapping": "Mapping (IProMx)",
+  "footer.partners": "Partenaires add-ons",
+  "footer.partners.mdt": "— MDT EMS / LSPD",
+  "footer.partners.vehicles": "— Pack véhicules",
+  "footer.copyright": "© 2026 LASTONE — TOUS DROITS RÉSERVÉS",
+  "footer.tagline": "FIVEM &amp; REDM · SERVEURS CUSTOM · FR / EN"
+};
+
+// Cache original (EN) values on load
+const EN_CONTENT = new Map();
+const EN_ATTR = new Map();
+document.querySelectorAll("[data-i18n]").forEach(el => {
+  EN_CONTENT.set(el, el.innerHTML);
+});
+document.querySelectorAll("[data-i18n-attr]").forEach(el => {
+  const [key, attr] = el.getAttribute("data-i18n-attr").split(":");
+  EN_ATTR.set(el, { attr, value: el.getAttribute(attr) });
+});
+
+function applyLang(lang) {
+  document.documentElement.lang = lang;
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (lang === "fr" && FR[key] !== undefined) {
+      el.innerHTML = FR[key];
+    } else if (EN_CONTENT.has(el)) {
+      el.innerHTML = EN_CONTENT.get(el);
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-attr]").forEach(el => {
+    const [key, attr] = el.getAttribute("data-i18n-attr").split(":");
+    if (lang === "fr" && FR[key] !== undefined) {
+      el.setAttribute(attr, FR[key]);
+    } else if (EN_ATTR.has(el)) {
+      const cached = EN_ATTR.get(el);
+      el.setAttribute(cached.attr, cached.value);
+    }
+  });
+
+  // Update <title> since it's in data-i18n
+  const titleEl = document.querySelector("title[data-i18n]");
+  if (titleEl) document.title = titleEl.textContent;
+
+  // Update toggle active state
+  document.querySelectorAll("[data-lang-opt]").forEach(opt => {
+    opt.classList.toggle("active", opt.getAttribute("data-lang-opt") === lang);
+  });
+}
+
+let savedLang = "en";
+try { savedLang = localStorage.getItem("lang") || "en"; } catch (e) {}
+applyLang(savedLang);
+
+const langToggle = document.getElementById("lang-toggle");
+if (langToggle) {
+  langToggle.addEventListener("click", () => {
+    const current = document.documentElement.lang === "fr" ? "fr" : "en";
+    applyLang(current === "fr" ? "en" : "fr");
+  });
+}
 </script>
 
 </body>
